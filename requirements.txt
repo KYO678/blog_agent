@@ -52,14 +52,6 @@ pandas==1.5.3
 python-dateutil==2.8.2
 python-dotenv==1.0.0
 python-igraph==0.10.4
-python-Levenshtein==0.20.9
-python-louvain==0.16
-python-multipart==0.0.6
-pytweening==1.0.7
-pytz==2022.7.1
-pyviz-comms==2.3.2
-pywin32==306
-pywin32-ctypes==0.2.2
 PyYAML==6.0.2
 pyzmq==25.0.2
 rapidfuzz==2.15.0
