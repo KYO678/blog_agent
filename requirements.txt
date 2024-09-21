@@ -145,11 +145,6 @@ numpy==1.24.2
 oauthlib==3.2.2
 omegaconf==2.3.0
 openai==1.46.1
-openai-whisper @ git+https://github.com/openai/whisper.git@248b6cb124225dd263bb9bd32d060b6517e067f8
-openapi-schema-pydantic==1.2.4
-opt-einsum==3.3.0
-orjson==3.10.7
-packaging==24.1
 pandas==1.5.3
 panel==1.1.0
 param==1.13.0
