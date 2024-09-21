@@ -33,8 +33,6 @@ matplotlib==3.7.0
 matplotlib-inline==0.1.6
 mdit-py-plugins==0.3.4
 mdurl==0.1.2
-mecab==0.996.3
-mecab-python3==1.0.6
 ml-dtypes==0.2.0
 more-itertools==9.1.0
 MouseInfo==0.1.3
