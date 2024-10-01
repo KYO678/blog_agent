@@ -3,16 +3,18 @@
 import streamlit as st
 from writer_agent import read_config, setup_agent, generate_blog_post
 from reviewer_agent import setup_reviewer_chain, evaluate_blog_post
-import yaml
+#import yaml
 
 def main():
     st.title("ブログ記事生成・評価アプリ")
     st.write("キーワードを入力して、ブログ記事を生成し、評価を受けましょう。")
 
     # 設定ファイルの読み込み
-    config = read_config("config.yaml")
-    openai_api_key = config.get("openai_api_key")
-    serpapi_api_key = config.get("serpapi_api_key")
+    #config = read_config("config.yaml")
+    #openai_api_key = config.get("openai_api_key")
+    #serpapi_api_key = config.get("serpapi_api_key")
+    openai.api_key = st.secrets.openai_api_key.key
+    serpapi_api_key = st.secrets.serpapi_api_key.key
 
     if not openai_api_key or not serpapi_api_key:
         st.error("設定ファイルにOpenAI APIキーまたは SerpAPI APIキーが見つかりません。")
