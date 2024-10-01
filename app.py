@@ -13,7 +13,7 @@ def main():
     #config = read_config("config.yaml")
     #openai_api_key = config.get("openai_api_key")
     #serpapi_api_key = config.get("serpapi_api_key")
-    openai.api_key = st.secrets.OpenaiApiKey.key
+    openai_api_key = st.secrets.OpenaiApiKey.key
     serpapi_api_key = st.secrets.serpapi_api_key.key
 
     if not openai_api_key or not serpapi_api_key:
