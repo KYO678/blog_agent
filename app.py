@@ -3,7 +3,6 @@
 import streamlit as st
 from writer_agent import setup_agent, generate_blog_post
 from reviewer_agent import setup_reviewer_chain, evaluate_blog_post
-#import yaml
 
 def main():
     st.title("ブログ記事生成・評価アプリ")
