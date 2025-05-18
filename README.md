@@ -1,2 +1,4 @@
 # blog_agent
 与えられたキーワードに基づき、Writer Agentが記事を作成し、Reviewer Agentが採点しフィードバックします。満足の行く内容になるまでこのサイクルを繰り返し、最終的に自己反芻したブログ記事を生成します。
+
+API keys should be stored outside version control (APIキーはバージョン管理に含めないでください)。
