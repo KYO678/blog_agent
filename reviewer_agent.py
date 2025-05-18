@@ -1,21 +1,7 @@
-import yaml
-import openai
 from langchain import LLMChain, PromptTemplate
-from langchain.llms import OpenAI
 from langchain_community.chat_models import ChatOpenAI
 import os
 
-def read_config(config_path: str) -> dict:
-    try:
-        with open(config_path, 'r') as file:
-            config = yaml.safe_load(file)
-        return config
-    except FileNotFoundError:
-        print(f"設定ファイル {config_path} が見つかりません。")
-        return {}
-    except yaml.YAMLError as e:
-        print(f"YAMLファイルの解析エラー: {e}")
-        return {}
 
 def setup_reviewer_chain(openai_api_key: str, prompt_template: str) -> LLMChain:
     os.environ["OPENAI_API_KEY"] = openai_api_key
