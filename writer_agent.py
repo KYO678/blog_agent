@@ -1,24 +1,8 @@
-import yaml
-import openai
 from langchain.agents import initialize_agent, Tool, AgentExecutor
 from langchain.agents import AgentType
-#from langchain.llms import OpenAI
-from langchain_community.llms import OpenAI
 from langchain.utilities import SerpAPIWrapper
 from langchain_openai import ChatOpenAI
 import os
-
-def read_config(config_path: str) -> dict:
-    try:
-        with open(config_path, 'r') as file:
-            config = yaml.safe_load(file)
-        return config
-    except FileNotFoundError:
-        print(f"設定ファイル {config_path} が見つかりません。")
-        return {}
-    except yaml.YAMLError as e:
-        print(f"YAMLファイルの解析エラー: {e}")
-        return {}
 
 def setup_agent(openai_api_key: str, serpapi_api_key: str) -> any:
     os.environ["OPENAI_API_KEY"] = openai_api_key

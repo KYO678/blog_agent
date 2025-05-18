@@ -1,7 +1,7 @@
 # app.py
 
 import streamlit as st
-from writer_agent import read_config, setup_agent, generate_blog_post
+from writer_agent import setup_agent, generate_blog_post
 from reviewer_agent import setup_reviewer_chain, evaluate_blog_post
 #import yaml
 
@@ -131,7 +131,7 @@ def main():
                                 score = int(value.strip().split("/")[0])
                                 scores[key.strip()] = score
                                 total_score += score
-                            except:
+                            except Exception:
                                 continue
 
                     st.markdown(f"**総合点数:** {total_score}/25")
